@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "268843058729",
+    "firebase_url": "https://photoblog-ea334.firebaseio.com",
+    "project_id": "photoblog-ea334",
+    "storage_bucket": "photoblog-ea334.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268843058729:android:d7caf1fc4389947fdb3e38",
+        "android_client_info": {
+          "package_name": "com.anasmisbah.qr_code"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268843058729-n47vu7d7i5v5mbegqe04hme0k20vc6g0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM88QfP0zMLq7dHWDzTNi_EcxGPuirkjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268843058729-n47vu7d7i5v5mbegqe04hme0k20vc6g0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "268843058729-crsl01fpabgokl4kd9mdluiabuo8v74n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anasmisbah.qrCode"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268843058729:android:6118304a94504ebf",
+        "android_client_info": {
+          "package_name": "com.example.anas.photoblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268843058729-n47vu7d7i5v5mbegqe04hme0k20vc6g0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM88QfP0zMLq7dHWDzTNi_EcxGPuirkjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268843058729-n47vu7d7i5v5mbegqe04hme0k20vc6g0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "268843058729-crsl01fpabgokl4kd9mdluiabuo8v74n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anasmisbah.qrCode"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

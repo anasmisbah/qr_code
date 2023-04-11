@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:qr_code/app/controllers/auth_controller.dart';
+import 'package:qr_code/app/routes/app_pages.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -56,14 +58,36 @@ class LoginView extends GetView<LoginController> {
             height: 20,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () async {
+              if (controller.isLoading.isFalse) {
+                controller.isLoading.value = true;
+                if (controller.emailC.text.isNotEmpty &&
+                    controller.passC.text.isNotEmpty) {
+                  Map<String, dynamic> res =
+                      await Get.find<AuthController>().login(
+                    controller.emailC.text,
+                    controller.passC.text,
+                  );
+                  if (res['error'] == true) {
+                    Get.snackbar('Error', res['message']);
+                  } else {
+                    Get.offAllNamed(Routes.HOME);
+                  }
+                } else {
+                  Get.snackbar('Error', 'Email dan password wajib diiisi');
+                }
+                controller.isLoading.value = false;
+              }
+            },
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
               padding: EdgeInsets.symmetric(vertical: 20),
             ),
-            child: Text("Login"),
+            child: Obx(
+              () => Text(controller.isLoading.isFalse ? "Login" : "Loading..."),
+            ),
           ),
         ],
       ),
