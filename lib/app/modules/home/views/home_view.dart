@@ -15,11 +15,68 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+      body: GridView.builder(
+        padding: EdgeInsets.all(20),
+        itemCount: 4,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 20,
         ),
+        itemBuilder: (context, index) {
+          late String title;
+          late IconData icon;
+          late VoidCallback onTap;
+          switch (index) {
+            case 0:
+              title = "Add Product";
+              icon = Icons.post_add_rounded;
+              onTap = () => Get.toNamed(Routes.ADD_PRODUCT);
+              break;
+            case 1:
+              title = "Products";
+              icon = Icons.list_alt_outlined;
+              onTap = () => Get.toNamed(Routes.PRODUCTS);
+              break;
+            case 2:
+              title = "QR Code";
+              icon = Icons.qr_code;
+              onTap = () => print("open camera");
+              break;
+            case 3:
+              title = "Catalog";
+              icon = Icons.document_scanner_outlined;
+              onTap = () => print("open pdf");
+
+              break;
+            default:
+          }
+          return Material(
+            color: Colors.grey.shade300,
+            borderRadius: BorderRadius.circular(9),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(9),
+              onTap: onTap,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: Icon(
+                      icon,
+                      size: 50,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(title),
+                ],
+              ),
+            ),
+          );
+        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
