@@ -46,7 +46,7 @@ class HomeView extends GetView<HomeController> {
             case 3:
               title = "Catalog";
               icon = Icons.document_scanner_outlined;
-              onTap = () => print("open pdf");
+              onTap = () => controller.downloadCatalog();
 
               break;
             default:
