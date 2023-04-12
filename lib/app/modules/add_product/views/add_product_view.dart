@@ -10,7 +10,7 @@ class AddProductView extends GetView<AddProductController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AddProductView'),
+        title: const Text('Add Product'),
         centerTitle: true,
       ),
       body: ListView(
